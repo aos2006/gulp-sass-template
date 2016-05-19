@@ -1,0 +1,11 @@
+%svg-common {
+	background: url("svg-sprite.svg") no-repeat;
+}
+
+$arrow-go-beta {
+	@extend %svg-common;
+	background-position: 0 0;
+	width: 88px;
+	height: 88px;
+}
+
