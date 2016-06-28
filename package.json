@@ -45,5 +45,11 @@
     "gulp.spritesmith": "^6.2.1",
     "stream-combiner2": "^1.1.1",
     "through2": "^2.0.1"
+  },
+  "config": {
+    "directories": {
+      "source": "./src",
+      "build": "./build"
+    }
   }
 }
