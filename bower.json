@@ -2,7 +2,7 @@
   "name": "gulp-sass-template",
   "description": "template",
   "main": "index.js",
-  "directory": "src/",
+  "directory": "./src/",
   "authors": [
     "aos2006 <vashchenko-01@mail.ru>"
   ],
@@ -15,5 +15,11 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "jquery": "^1.11.1",
+    "susy": "^2.2.12",
+    "jquery.inputmask": "^3.x",
+    "intl-tel-input": "^9.2.2"
+  }
 }
