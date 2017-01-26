@@ -1,15 +1,13 @@
-/*
-  SASS variables are information about icon's compiled state, stored under its original file name
-
-  .icon-home
-    width: $icon-home-width
-
-  The large array-like variables contain all information about a single icon
-  $icon-home: x y offset_x offset_y width height total_width total_height image_path
-
-  At the bottom of this section, we provide information about the spritesheet itself
-  $spritesheet: width height image $spritesheet-sprites
-  */
+// SASS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home
+//   width: $icon-home-width
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites
 $mastercard-hover-name: 'mastercard-hover'
 $mastercard-hover-x: 0px
 $mastercard-hover-y: 0px
@@ -197,11 +195,9 @@ $retina-spritesheet-image: '../img/sprite@2x.png'
 $retina-spritesheet-sprites: ($mastercard-hover-2x, $mastercard-2x, $visa-hover-2x, $visa-2x, $telegram-large-2x, $telegram-2x, $whatsapp-large-2x, $whatsapp-2x, )
 $retina-spritesheet: (84px, 482px, '../img/sprite@2x.png', $retina-spritesheet-sprites, )
 
-/*
-  These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
-
-  The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
-  */
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
 $mastercard-hover-group-name: 'mastercard-hover'
 $mastercard-hover-group: ('mastercard-hover', $mastercard-hover, $mastercard-hover-2x, )
 $mastercard-group-name: 'mastercard'
@@ -220,28 +216,26 @@ $whatsapp-group-name: 'whatsapp'
 $whatsapp-group: ('whatsapp', $whatsapp, $whatsapp-2x, )
 $retina-groups: ($mastercard-hover-group, $mastercard-group, $visa-hover-group, $visa-group, $telegram-large-group, $telegram-group, $whatsapp-large-group, $whatsapp-group, )
 
-/*
-  The provided mixins are intended to be used with the array-like variables
-
-  .icon-home
-    @include sprite-width($icon-home)
-
-  .icon-email
-    @include sprite($icon-email)
-
-  Example usage in HTML:
-    `display: block` sprite:
-    <div class="icon-home"></div>
-
-  To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
-    // CSS
-    .icon {
-      display: inline-block;
-    }
-
-    // HTML
-    <i class="icon icon-home"></i>
-  */
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home
+//   @include sprite-width($icon-home)
+//
+// .icon-email
+//   @include sprite($icon-email)
+//
+// Example usage in HTML:
+//   `display: block` sprite:
+//   <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//   // CSS
+//   .icon {
+//     display: inline-block;
+//   }
+//
+//   // HTML
+//   <i class="icon icon-home"></i>
 @mixin sprite-width($sprite)
   width: nth($sprite, 5)
 
@@ -263,17 +257,15 @@ $retina-groups: ($mastercard-hover-group, $mastercard-group, $visa-hover-group, 
   @include sprite-width($sprite)
   @include sprite-height($sprite)
 
-/*
-  The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
-    It should be used with a "retina group" variable.
-
-  The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
-
-  $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, )
-
-  .icon-home
-    @include retina-sprite($icon-home-group)
-  */
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, )
+//
+// .icon-home
+//   @include retina-sprite($icon-home-group)
 @mixin sprite-background-size($sprite)
   $sprite-total-width: nth($sprite, 7)
   $sprite-total-height: nth($sprite, 8)
@@ -288,24 +280,20 @@ $retina-groups: ($mastercard-hover-group, $mastercard-group, $visa-hover-group, 
     @include sprite-image($retina-sprite)
     @include sprite-background-size($normal-sprite)
 
-/*
-  The `sprites` mixin generates identical output to the CSS template
-    but can be overridden inside of SASS
-
-  @include sprites($spritesheet-sprites)
-  */
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SASS
+//
+// @include sprites($spritesheet-sprites)
 @mixin sprites($sprites)
   @each $sprite in $sprites
     $sprite-name: nth($sprite, 10)
     .#{$sprite-name}
       @include sprite($sprite)
 
-/*
-  The `retina-sprites` mixin generates a CSS rule and media query for retina groups
-    This yields the same output as CSS retina template but can be overridden in SASS
-
-  @include retina-sprites($retina-groups)
-  */
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SASS
+//
+// @include retina-sprites($retina-groups)
 @mixin retina-sprites($retina-groups)
   @each $retina-group in $retina-groups
     $sprite-name: nth($retina-group, 1)
