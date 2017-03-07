@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.12.8",
+    "bs-html-injector": "^3.0.3",
     "del": "^2.2.0",
     "fs": "0.0.2",
     "gulp": "github:gulpjs/gulp#4.0",

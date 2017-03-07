@@ -1,0 +1,9 @@
+<ul class="news-list {{ newsClass }}">
+    {% block content %}
+    {% for item in newsList %}
+    <li class="news-list__item">
+        <a href="{{ item.href }}" class="news-list__link">{{ item.txt }}</a>
+    </li>
+    {% endfor %}
+    {% endblock %}
+</ul>
