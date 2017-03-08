@@ -1,0 +1,22 @@
+<ul class="accordion {{ accordionClass }}">
+    {% block content %}
+        {% for item in accordion %}
+            <li class="accordion__item {{ item.defaultState }}">
+                <header class="accordion__header js-accordion-header">
+                    <h3 class="accordion__title">{{ item.title }}</h3>
+                    <i class="accordion__icon">
+                        {% include '../icon/icon.twig'  with {
+                            icon: 'arrow-dropdown',
+                            iconClass: 'arrow-accordion-down'
+                        } %}
+                    </i>
+                </header>
+                {% block innerContent %}
+                <div class="accordion__content js-accordion-content">
+                    {{ item.content }}
+                </div>
+                {% endblock %}
+            </li>
+        {% endfor %}
+    {% endblock %}
+</ul>

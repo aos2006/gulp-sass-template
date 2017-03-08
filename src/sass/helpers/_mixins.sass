@@ -9,9 +9,10 @@
 	@media only screen and (max-height: $height + "px")
 		@content
 
-=fs($sizeValue: 16)
+=fs($sizeValue: 10)
 	font-size: $sizeValue + px
 	font-size: $sizeValue / 10 + rem
+
 
 =text-overflow
 	overflow: hidden
@@ -309,6 +310,8 @@
 	@for $i from 1 through 200
 		$val: #{$val}, #{$i}px #{$i}px #{$color}
 	@return $val
+@function get-rem($val)
+	@return $val / 10 + rem
 
 =longshadow($color)
 	text-shadow: makelongshadow($color)

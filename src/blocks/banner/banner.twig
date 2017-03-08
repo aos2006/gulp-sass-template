@@ -1,7 +1,14 @@
-<section class="banner">
-    <h2 class="banner__title">Что такое NOVACOIN?</h2>
-    <h3 class="banner__subtitle">NOVACOIN - Криптовалюта второго поколения</h3>
-    {% include '../button/button.twig'  with {
-        btnTxt: 'Подробнее'
-    }%}
+<section class="banner {{ bannerClass }}">
+    <div class="banner__i container">
+        {% block content %}
+            <h2 class="banner__title">Что такое NOVACOIN?</h2>
+            <h3 class="banner__subtitle">NOVACOIN - Криптовалюта второго поколения</h3>
+            <div class="banner__btn">
+                {% include '../button/button.twig'  with {
+                    btnTxt: 'Подробнее',
+                    btnClass: 'btn--green'
+                }%}
+            </div>
+        {% endblock %}
+    </div>
 </section>

@@ -1,0 +1,39 @@
+<section class="subscribe">
+    <div class="subscribe__i container">
+        {% block content %}
+        <header class="abstract-section__header abstract-section__header--small">
+            <div class="subscribe__title">
+                {% include '../title/title.twig' with {
+                h3: true,
+                titleTxt: 'Подпишитесь и получайте свежие статьи на почту',
+                titleClass: 'title--medium title--type-subscribe'
+                } %}
+            </div>
+        </header>
+        <div class="subscribe__list">
+            <div class="subscribe__input">
+                {% include '../input/input.twig' with {
+                inputValue: '',
+                placeholder: 'Ваше имя',
+                inputClass: 'input--gray'
+
+                } %}
+            </div>
+            <div class="subscribe__input">
+                {% include '../input/input.twig' with {
+                    inputValue: '',
+                    placeholder: 'Ваш email',
+                    inputClass: 'input--gray'
+
+                } %}
+            </div>
+            <div class="subscribe__btn">
+                {% include '../button/button.twig' with {
+                btnTxt: 'Подписаться',
+                btnClass: 'btn--green'
+                } %}
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+</section>

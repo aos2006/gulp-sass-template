@@ -1,22 +1,38 @@
-.container
-	width: 1140px
-	margin: auto
-	font-size: 0
-
-.container-full
-	position: relative
-	&--bg-gray-26
-		background-color: #1d2126
-	&--border
-		border-bottom: 1px solid #dde1e4
-	&--bg-gray-4d
-		background-color: #3a454d
 a
 	cursor: pointer
 
 img
 	max-width: 100%
+
 .svg-sprites
 	visibility: hidden
 	overflow: hidden
 	height: 0
+
+body
+	font-family: "Roboto", "Arial", "Helvetica", sans-serif
+	background-color: #fff
+	min-width: 1024px
+
+*
+	z-index: 1
+.container
+	@include container(1024px)
+html
+	font-size: 10px
+
+.page
+	&__last-pubs
+		margin-bottom: get-rem(20)
+	&__description
+		padding: get-rem(40) 0 get-rem(46) 0
+		color: #333333
+		font-size: get-rem(14)
+		font-weight: 400
+		line-height: get-rem(24)
+	&__accordion
+		margin-bottom: get-rem(42)
+	&__btn
+		margin-top: get-rem(20)
+	&__table
+		margin-bottom: get-rem(40)

@@ -1,0 +1,7 @@
+<ul class="breadcrumbs {{ class }}">
+      {% for item in breadcrumbs %}
+    <li class="breadcrumbs__item">
+        <a href="{{ item.href }}" class="breadcrumbs__link">{{ item.txt }}</a>
+    </li>
+    {% endfor %}
+</ul>

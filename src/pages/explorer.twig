@@ -1,0 +1,119 @@
+{% set breadcrumbs = [
+{href: '#', txt: 'Главная'},
+{href: '#', txt: 'Экспертам'},
+{href: '#', txt: 'Explorer'}
+] %}
+
+{% set table = {
+heads: [
+{txt: 'Height'},
+{txt: 'Hash'},
+{txt: 'Type'},
+{txt: 'Age'},
+{txt: 'Difficult'},
+{txt: 'Transactions'},
+{txt: 'Total Out'},
+{txt: 'Block size'},
+{txt: 'TX Size'},
+{txt: ''},
+],
+items: [
+{
+    state: 'table__tr--light',
+    list: [{txt: '317173', state:'blue'},{txt: 'f29eceb1c18aced7...'},{txt: 'PoS', state: 'red'},{txt: '10 min'},{txt: '6.315659'},{txt: '2'},{txt: '18.368100'},{txt: '411'}, {txt: '2', state: 'red'}, {txt: 'Pow Gen', state: 'black'}]
+
+},
+
+{
+list: [{txt: '317173', state:'blue'},{txt: 'f29eceb1c18aced7...'},{txt: 'PoS', state: 'red'},{txt: '10 min'},{txt: '6.315659'},{txt: '2'},{txt: '18.368100'},{txt: '411'}, {txt: '2', state: 'red'}, {txt: 'Pow Gen', state: 'black'}]
+
+},
+
+]} %}
+
+{% set accordion = [
+{title: "Most recently mined blocks in the Novacoin block chain", content: 'raz dva tri', defaultState: 'accordion__item--expanded'},
+] %}
+{% extends '../blocks/layout/layout.twig' %}
+{% block content %}
+    <main class="main">
+        <div class="main__i">
+            {% embed '../blocks/banner/banner.twig' with {bannerClass: 'banner--type-presentation banner--type-explorer'}%}
+                {% block content %}
+                    <div class="banner__info">
+                        <div class="banner__breadcrumbs">
+                            {% include '../blocks/breadcrumbs/breadcrumbs.twig' %}
+                        </div>
+                        <h2 class="banner__title banner__title--large">
+                            Eplorer
+                        </h2>
+                    </div>
+                    <div class="banner__search">
+                        {% include '../blocks/search/search.twig' %}
+                    </div>
+                {% endblock %}
+            {% endembed %}
+             <div class="page__table container">
+                 {% embed '../blocks/accordion/accordion.twig' %}
+                     {% block content %}
+                         {% for item in accordion %}
+                         <li class="accordion__item {{ item.defaultState }}">
+                             <header class="accordion__header js-accordion-header">
+                                 <h3 class="accordion__title">{{ item.title }}</h3>
+                                 <i class="accordion__icon">
+                                     {% include '../blocks/icon/icon.twig'  with {
+                                     icon: 'arrow-dropdown',
+                                     iconClass: 'arrow-accordion-down'
+                                     } %}
+                                 </i>
+                             </header>
+                             <div class="accordion__table js-accordion-content">
+                                 {% include '../blocks/table/table.twig' with {
+                                     table: table
+                                 }%}
+                             </div>
+                         </li>
+                    {% endfor %}
+                 {% endblock %}
+                 {% endembed %}
+                 <div class="page__btn">
+                     {% include '../blocks/button/button.twig' with {
+                        btnTxt: 'More blocks',
+                        btnClass: 'btn--green'
+                     } %}
+                 </div>
+             </div>
+
+            <div class="page__table container">
+                {% embed '../blocks/accordion/accordion.twig' %}
+                    {% block content %}
+                        {% for item in accordion %}
+                            <li class="accordion__item {{ item.defaultState }}">
+                                <header class="accordion__header js-accordion-header">
+                                    <h3 class="accordion__title">{{ item.title }}</h3>
+                                    <i class="accordion__icon">
+                                        {% include '../blocks/icon/icon.twig'  with {
+                                        icon: 'arrow-dropdown',
+                                        iconClass: 'arrow-accordion-down'
+                                        } %}
+                                    </i>
+                                </header>
+                                <div class="accordion__table js-accordion-content">
+                                    {% include '../blocks/table/table.twig' with {
+                                    table: table
+                                    }%}
+                                </div>
+                            </li>
+                        {% endfor %}
+                    {% endblock %}
+                {% endembed %}
+                <div class="page__btn">
+                    {% include '../blocks/button/button.twig' with {
+                    btnTxt: 'More blocks',
+                    btnClass: 'btn--green'
+                    } %}
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

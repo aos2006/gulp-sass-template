@@ -1,30 +1,36 @@
 /*vendors*/
-//@import '../bower_components/susy/sass/susy'
+@import '../bower_components/susy/sass/susy'
 /*vendors*/
+
+@import "helpers/_susy-config.scss"
+
+@import helpers/variabless
+@import helpers/functions
+@import helpers/mixins
+@import helpers/placeholders
+
 
 @import base/reset
 @import '../blocks/page-header/page-header'
 @import base/base
+
+@import "../sprites/svg/svg-sprite-template"
 //
-//@import helpers/variabless
-//@import helpers/functions
-//@import helpers/mixins
-//@import helpers/placeholders
 //
-//@import layout/page-header
-//@import layout/page-footer
+@import ../blocks/page-header/page-header
+@import ../blocks/page-footer/page-footer
 //
 //@import components/forms
 //@import components/link
-//@import components/logo
-//@import components/navigation
+@import ../blocks/logo/logo
+@import ../blocks/navigation/navigation
 //@import components/slider
 //@import components/slider-controls
 //@import components/slider-content
-//@import components/button
-//@import components/title
-//@import components/social-list
-//@import components/input
+@import ../blocks/button/button
+@import ../blocks/title/title
+@import ../blocks/social-list/social-list
+@import ../blocks/input/input
 //@import components/label
 //@import components/textarea
 
@@ -37,3 +43,15 @@
 @import '../blocks/title/_title.sass'
 @import '../blocks/input/_input.sass'
 @import '../blocks/features-list/_features-list.sass'
+@import '../blocks/dropdown/_dropdown.sass'
+@import '../blocks/icon/_icon.sass'
+@import '../blocks/abstract-section/_abstract-section.sass'
+@import '../blocks/subscribe/_subscribe.sass'
+@import '../blocks/last-pubs/_last-pubs.sass'
+@import '../blocks/features/_features.sass'
+@import '../blocks/wallet/_wallet.sass'
+@import '../blocks/goto/_goto.sass'
+@import '../blocks/breadcrumbs/_breadcrumbs.sass'
+@import '../blocks/accordion/_accordion.sass'
+@import '../blocks/search/_search.sass'
+@import '../blocks/table/_table.sass'

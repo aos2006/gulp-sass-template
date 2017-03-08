@@ -1,0 +1,24 @@
+.breadcrumbs
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  &__link
+    opacity: 0.9
+    font-size: get-rem(18)
+    font-weight: 400
+    line-height: 1
+    color: #333333
+  &__item
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    &:last-of-type
+      &:after
+        display: none
+    &:after
+      display: block
+      content: '/'
+      margin: 0 5px
+      color: #d4d6d5
+      font-size: get-rem(18)
+

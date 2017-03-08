@@ -1,0 +1,19 @@
+<section class="features abstract-section">
+    <header class="abstract-section__header">
+        <div class="features__title">
+            {% include '../title/title.twig' with {
+            h2: true,
+            titleTxt: 'Отличия и пеимущество',
+            titleClass: 'title--large'
+            } %}
+        </div>
+    </header>
+    <div class="features__list">
+        {% include '../features-list/features-list.twig' %}
+    </div>
+    <footer class="features__footer">
+        {% include '../wallet/wallet.twig' with {
+            fileLink: walletFileLink
+        }%}
+    </footer>
+</section>

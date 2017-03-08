@@ -1,1 +1,37 @@
-.page-footer	padding-top: 40px	background: #000 url("../img/information-picture/decors-img/page-footer-skin.jpg")	background-size: cover	background-repeat: no-repeat	+r(750px)		background: #000	&__container		@include container(1061px)		+r(1051px)			@include container(720px)	&__navigation		@include span(12 of 12)		margin-bottom: 35px	&__middle		padding-bottom: 40px		@include susy-clearfix
+.page-footer
+  padding: get-rem(42) 0 get-rem(58) 0
+  background-color: #dadde4
+  &__i
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+  &__item
+    &:nth-child(1)
+      @include span(2)
+    &:nth-child(2)
+      @include span(2)
+    &:nth-child(3)
+      @include span(6)
+    &:nth-child(4)
+      @include span(2 last)
+  &__copyright
+    color: #261f1b
+    font-size: 10px
+    font-weight: 400
+    line-height: 28px
+    opacity: 0.6
+  &__logo
+    margin-bottom: get-rem(65)
+  &__title
+    margin-bottom: get-rem(28)
+    white-space: nowrap
+    opacity: 0.7
+    padding-bottom: 10px
+    color: #413f42
+    border-bottom: 1px solid #b0b1b6
+    font-size: get-rem(19)
+    font-weight: 500
+    line-height: 28px
+    text-transform: uppercase
+
+

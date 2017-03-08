@@ -1,0 +1,182 @@
+.pp-header, #headerShowcase, #requisites, .pp-footer, #headerShowcase, #headerPayment, #reqLegend, #aux, #cancel, #cancel, #back{
+    display: none !important;
+}
+
+div#errorCard.pp-message.pp-rounded-10px.requisite.pp-error {
+    border-radius: 0 !important;
+    background-color: #333;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    margin-left: -230px;
+}
+
+.pp-viewport {
+    box-shadow: none;
+}
+ul.pp-showcases{
+    margin-left: 0;
+}
+ul.pp-showcases li, ul.pp-showcases li:hover {
+    width: 33.3333%;
+    margin: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    padding: 35px 20px 20px 20px;
+    border-radius: 0;
+    min-height: 150px;
+}
+ul.pp-showcases li>a:hover {
+    box-shadow: none;
+}
+div.card-form ul.pp-forms li.pp-form label {
+    font-size: 11px !important;
+    font-weight: normal;
+}
+div.card-form ul.pp-forms li.pp-form label sup {
+    display: none;
+}
+div.card-form ul.pp-forms li.pp-form div input {
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+li.pp-form {
+    position: relative;
+    float: left;
+    width: 28%;
+    padding:15px 20px;
+    border: 1px solid #e1e3e4;
+    box-sizing: border-box;
+    min-height: 86px;
+    margin-bottom: 0 !important;
+    font-family: "Verdana", "Tahoma", sans-serif;
+}
+li.pp-form:first-child {
+    width: 52%;
+    border-right: 0;
+}
+li.pp-form:last-child {
+    border-left: 0;
+    width: 20%;
+}
+.card-form {
+    width: 100% !important;
+}
+li:first-child.pp-form>div,
+li:last-child.pp-form>div{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    z-index: 1;
+    margin-left: 0 !important;
+}
+li.pp-form>div>input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    padding: 0 20px;
+    padding-top: 15px;
+}
+
+
+
+ul.pp-forms{
+    margin: 0 !important;
+}
+.card-form li.pp-form>div select.pp-input-text-small{
+    width: 44%;
+    margin: 0 !important;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+div.pp-buttons{
+    border-top: none;
+    padding: 0;
+    margin-top: 10px !important;
+}
+#proceed{
+    width: 100%;
+    background: #006eb5;
+    border-radius: 0;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    padding: 36px 37px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-transition: .2s;
+    transition: .2s;
+    font-family: Verdana;
+    font-size: 18px;
+}
+
+li:first-child>label,
+li:last-child>label{
+    position: absolute;
+    top: 15px;
+    right: 0;
+    left: 20px;
+    z-index: 1;
+}
+
+
+
+div.pp-form-error input[type="tel"] {
+    background-color: transparent!important;
+}
+
+/*.pp-vaucher-numper + .pp-form-error:after {*/
+    /*content: '';*/
+    /*position: absolute;*/
+    /*top: 38px;*/
+    /*right: 20px;*/
+    /*bottom: 30px;*/
+    /*left: 20px;*/
+    /*background-color: #ffdcdc;*/
+    /*height: 22px;*/
+/*}*/
+
+div.card-form ul.pp-forms li.pp-form div.pp-form-error:before {
+    content: '';
+    position: absolute;
+    top: 38px;
+    right: 20px;
+    bottom: 30px;
+    left: 20px;
+    background-color: #ffdcdc;
+    height: 22px;
+}
+
+#lirequisite_cardExpiry div.pp-form-error:before {
+    display: none;
+}
+
+
+li.pp-form>div>input:focus
+{
+    height: 22px!important;
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+    top: 38px!important;
+    right: 20px!important;
+    bottom: 30px!important;
+    left: 20px!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+

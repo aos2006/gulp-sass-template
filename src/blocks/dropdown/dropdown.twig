@@ -1,0 +1,13 @@
+<ul class="dropdown-list">
+    <li class="dropdown-list__i">
+        <ul class="">
+            {% for item in list %}
+           <li class="dropdown-list__item">
+               <a href="{{ item.href }}" class="dropdown-list__link">
+                   {{ item.txt }}
+               </a>
+           </li>
+            {% endfor %}
+        </ul>
+    </li>
+</ul>

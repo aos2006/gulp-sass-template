@@ -1,0 +1,44 @@
+.accordion
+  &__item
+    &--expanded
+      .accordion__content
+        display: block
+  &__header
+    position: relative
+    padding-left: 23px
+    padding-top: get-rem(20)
+    padding-bottom: get-rem(20)
+    background-color: #fff
+    border-bottom: 1px solid #80d381
+    cursor: pointer
+  &__title
+    opacity: 0.9
+    color: #333333
+    font-size: get-rem(25)
+    font-weight: 700
+    line-height: get-rem(24)
+    max-width: 790px
+  &__content
+    display: none
+    background-color: #f6faf2
+    padding: get-rem(18) 89px get-rem(47) 21px
+    color: #333333
+    font-size: get-rem(14)
+    font-weight: 400
+    line-height: get-rem(18)
+    p
+      color: #333333
+      font-size: get-rem(14)
+      font-weight: 400
+      line-height: get-rem(18)
+      margin-bottom: get-rem(10)
+      &:last-of-type
+        margin-bottom: 0
+
+  &__icon
+    position: absolute
+    right: 21px
+    top: 50%
+    transform: translateY(-50%)
+    color: #10b510
+

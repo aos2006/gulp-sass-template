@@ -1,16 +1,26 @@
-<ul class="features-list">
-    {% for item in featuresList %}
-    <li class="features-list__item">
-        <div class="features-list__descr">
-            <i class="icon">{{ item.icon }}</i>
-            {{ item.label }}
-        </div>
-        <div class="features-list__para">
-            {{ item.para }}
-        </div>
-        <div class="features-list__icon">
-            <i class="icon">Arrow</i>
-        </div>
-    </li>
-    {% endfor %}
-</ul>
+<div class="features-list container">
+    <ul class="features-list__list">
+        {% for item in featuresList %}
+            <li class="features-list__item">
+                <div class="features-list__descr">
+                    <div class="features-list__icon">
+                        {% include '../icon/icon.twig' with {
+                            icon: item.icon,
+                        } %}
+                    </div>
+                    <p class="features-list__txt">
+                        {{ item.label }}
+                    </p>
+                </div>
+                <div class="features-list__para">
+                    {{ item.para }}
+                </div>
+                <a href="{{ item.href }}" class="features-list__go-arrow">
+                    {% include '../icon/icon.twig' with {
+                    icon: 'arrow-go',
+                    } %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

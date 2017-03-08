@@ -1,0 +1,23 @@
+<div class="search">
+    <div class="search__i">
+        <div class="search__input-container">
+            <div class="search__icon">
+                {% include '../icon/icon.twig' with {
+                    icon: 'search'
+                }%}
+            </div>
+            {% include '../input/input.twig' with {
+                placeholder: 'Hash (not less than 12 first chars) or numbers',
+                inputClass: 'input--white search__input',
+                type: 'text'
+            }%}
+        </div>
+        <p class="search__descr">
+            You may enter a height of block, block hash, address or transaction hash not less than 12 first characters
+        </p>
+        {% include '../button/button.twig' with {
+            btnClass: 'btn--green',
+            btnTxt: 'Search'
+        } %}
+    </div>
+</div>

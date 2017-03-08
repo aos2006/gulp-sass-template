@@ -1,0 +1,26 @@
+<section class="goto abstract-section">
+    <header class="abstract-section__header abstract-section__header--large">
+        <div class="goto__title">
+            {% include '../title/title.twig' with {
+            h2: true,
+            titleTxt: 'Перейти в раздел',
+            titleClass: 'title--large'
+            } %}
+        </div>
+    </header>
+    <ul class="goto__list">
+        <li class="goto__item">
+            <a href="{{ linkBeginner }}" class="goto__link goto__link--beginner">Для новичков</a>
+        </li>
+        <li class="goto__item">
+            <a href="{{ linkSenior }}" class="goto__link goto__link--senior">Для экспертов</a>
+        </li>
+    </ul>
+    <div class="goto__graphic"></div>
+    <div class="goto__btn">
+        {% include '../button/button.twig' with {
+            btnTxt: 'Смотреть котировки',
+            btnClass: 'btn--green'
+        } %}
+    </div>
+</section>

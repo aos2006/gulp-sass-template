@@ -1,0 +1,16 @@
+<div class="table">
+    <div class="table__tr table__tr--type-head">
+        {% for item in table.heads %}
+            <div class="table__td">{{ item.txt }}</div>
+        {% endfor %}
+    </div>
+    {% for item in table.items %}
+        <div class="table__tr {{ item.state }}">
+            {% for item in item.list %}
+                <div class="table__td table__td--{{ item.state }}">
+                    {{ item.txt }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,15 @@
+<div class="wallet container">
+    <div class="wallet__i container">
+        {% include '../title/title.twig' with {
+            h3: true,
+            titleTxt: "Nova Coin кошелек на любую платформу",
+            titleClass: 'title--xs-small wallet__title'
+        } %}
+        <a href="{{ fileLink }}" class="wallet__btn">
+            {% include '../button/button.twig' with {
+                btnTxt: 'Скачать кошелек',
+                btnClass: 'btn--green'
+            } %}
+        </a>
+    </div>
+</div>

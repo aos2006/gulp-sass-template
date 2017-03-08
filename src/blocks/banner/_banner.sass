@@ -1,0 +1,49 @@
+.banner
+  display: flex
+  width: 100%
+  background-image: url('../img/information-picture/banner-main-page.jpg')
+  min-height: 529px
+  align-items: center
+  &--type-presentation
+    min-height: 1px
+    padding: get-rem(30) 0 get-rem(67) 0
+    align-items: flex-start
+    .banner__title
+      opacity: 0.9
+      color: #535353
+      text-align: left
+      margin-bottom: 0
+    .banner__i
+      width: 100%
+  &--type-beginners
+    background-image: url('../img/information-picture/banner-beginners.jpg')
+  &--type-explorer
+    background-image: url('../img/information-picture/banner-explorer.jpg')
+    margin-bottom: get-rem(20)
+    .banner__i
+      justify-content: space-between
+      display: flex
+  &__title
+    margin-bottom: get-rem(25)
+    font-size: get-rem(39)
+    font-weight: 700
+    line-height: get-rem(28)
+    color: #261f1b
+    text-align: center
+    &--large
+      font-size: get-rem(60)
+  &__subtitle
+    margin-bottom: get-rem(48)
+    font-size: get-rem(18)
+    font-weight: 400
+    line-height: get-rem(28)
+    color: #261f1b
+    text-align: center
+  &__btn
+    text-align: center
+  &__breadcrumbs
+    margin-bottom: get-rem(45)
+  &__search
+    margin-left: auto
+    margin-top: auto
+    margin-bottom: 16px
