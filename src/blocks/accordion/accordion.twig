@@ -1,7 +1,7 @@
-<ul class="accordion {{ accordionClass }}">
+<ul class="accordion {{ accordionClass }} js-accordion">
     {% block content %}
         {% for item in accordion %}
-            <li class="accordion__item {{ item.defaultState }}">
+            <li class="accordion__item {{ item.defaultState }} js-accordion-item" data-eq="{{ item.index }}">
                 <header class="accordion__header js-accordion-header">
                     <h3 class="accordion__title">{{ item.title }}</h3>
                     <i class="accordion__icon">

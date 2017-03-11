@@ -1,0 +1,34 @@
+<article class="blog-list">
+    {% for item in blogList %}
+    <div class="blog-list__item">
+        <header class="blog-list__header">
+               {% include '../title/title.twig' with {
+                    h3: true,
+                    titleTxt: item.title,
+                    titleClass: 'blog-list__title'
+               }%}
+            <span class="blog-list__from-by">
+                {{ item.fromBy }}
+            </span>
+            <time class="blog-list__date">
+                {{ item.date }}
+            </time>
+        </header>
+        <div class="blog-list__content">
+            {% include '../title/title.twig' with {
+                h3: true,
+                titleTxt: 'Изменения: '
+            } %}
+            <p class="blog-list__para">
+                {{ item.content }}
+            </p>
+        </div>
+        <footer class="blog-list__footer">
+            <a href="{{ item.href }}" class="blog-list__more">Читать далее</a>
+            <span class="blog-list__add-comment">
+                Добавить комментарий
+            </span>
+        </footer>
+    </div>
+    {% endfor %}
+</article>

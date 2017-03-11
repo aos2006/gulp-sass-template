@@ -32,7 +32,7 @@ list: [{txt: '317173', state:'blue'},{txt: 'f29eceb1c18aced7...'},{txt: 'PoS', s
 ]} %}
 
 {% set accordion = [
-{title: "Most recently mined blocks in the Novacoin block chain", content: 'raz dva tri', defaultState: 'accordion__item--expanded'},
+{title: "Most recently mined blocks in the Novacoin block chain", content: 'raz dva tri', defaultState: 'accordion__item--expanded', index: 1},
 ] %}
 {% extends '../blocks/layout/layout.twig' %}
 {% block content %}
@@ -57,7 +57,7 @@ list: [{txt: '317173', state:'blue'},{txt: 'f29eceb1c18aced7...'},{txt: 'PoS', s
                  {% embed '../blocks/accordion/accordion.twig' %}
                      {% block content %}
                          {% for item in accordion %}
-                         <li class="accordion__item {{ item.defaultState }}">
+                         <li class="accordion__item {{ item.defaultState }} js-accordion-item" data-eq="{{ item.index }}">
                              <header class="accordion__header js-accordion-header">
                                  <h3 class="accordion__title">{{ item.title }}</h3>
                                  <i class="accordion__icon">
@@ -67,28 +67,28 @@ list: [{txt: '317173', state:'blue'},{txt: 'f29eceb1c18aced7...'},{txt: 'PoS', s
                                      } %}
                                  </i>
                              </header>
-                             <div class="accordion__table js-accordion-content">
+                             <div class="accordion__table js-accordion-content accordion__content">
                                  {% include '../blocks/table/table.twig' with {
                                      table: table
                                  }%}
+                                 <div class="page__btn">
+                                     {% include '../blocks/button/button.twig' with {
+                                     btnTxt: 'More blocks',
+                                     btnClass: 'btn--green'
+                                     } %}
+                                 </div>
                              </div>
                          </li>
                     {% endfor %}
                  {% endblock %}
                  {% endembed %}
-                 <div class="page__btn">
-                     {% include '../blocks/button/button.twig' with {
-                        btnTxt: 'More blocks',
-                        btnClass: 'btn--green'
-                     } %}
-                 </div>
              </div>
 
             <div class="page__table container">
                 {% embed '../blocks/accordion/accordion.twig' %}
                     {% block content %}
                         {% for item in accordion %}
-                            <li class="accordion__item {{ item.defaultState }}">
+                            <li class="accordion__item {{ item.defaultState }} js-accordion-item" data-eq="{{ item.index }}">
                                 <header class="accordion__header js-accordion-header">
                                     <h3 class="accordion__title">{{ item.title }}</h3>
                                     <i class="accordion__icon">
@@ -98,22 +98,23 @@ list: [{txt: '317173', state:'blue'},{txt: 'f29eceb1c18aced7...'},{txt: 'PoS', s
                                         } %}
                                     </i>
                                 </header>
-                                <div class="accordion__table js-accordion-content">
+                                <div class="accordion__table js-accordion-content accordion__content">
                                     {% include '../blocks/table/table.twig' with {
                                     table: table
                                     }%}
+                                    <div class="page__btn">
+                                        {% include '../blocks/button/button.twig' with {
+                                        btnTxt: 'More blocks',
+                                        btnClass: 'btn--green'
+                                        } %}
+                                    </div>
                                 </div>
                             </li>
                         {% endfor %}
                     {% endblock %}
                 {% endembed %}
-                <div class="page__btn">
-                    {% include '../blocks/button/button.twig' with {
-                    btnTxt: 'More blocks',
-                    btnClass: 'btn--green'
-                    } %}
-                </div>
             </div>
+
         </div>
     </main>
 {% endblock %}

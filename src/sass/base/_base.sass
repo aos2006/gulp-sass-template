@@ -20,6 +20,9 @@ body
 	@include container(1024px)
 html
 	font-size: 10px
+.main
+	&--type-blog
+		background-color: #f0f2f1
 
 .page
 	&__last-pubs
@@ -36,3 +39,12 @@ html
 		margin-top: get-rem(20)
 	&__table
 		margin-bottom: get-rem(40)
+	&__blog-list
+		@include span(9)
+	&__blog
+		padding: get-rem(20) 0 get-rem(40) 0
+	&__pagination
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-top: get-rem(40)

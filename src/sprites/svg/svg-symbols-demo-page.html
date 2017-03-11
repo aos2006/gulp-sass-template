@@ -111,6 +111,16 @@
       }
     </style>
     <style type="text/css">
+      .icon-arrow-left {
+        width: 1.313em;
+        height: 0.813em;
+      }
+      
+      .icon-arrow-right {
+        width: 1.313em;
+        height: 0.813em;
+      }
+      
       .icon-arrow-dropdown {
         width: 1.25em;
         height: 0.75em;
@@ -220,6 +230,12 @@
   <filter id="filter" x="0" y="0" width="40.5" height="41" filterUnits="userSpaceOnUse"> <feImage preserveAspectRatio="none" x="0" y="0" width="40.5" height="41" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNDAuNSIgaGVpZ2h0PSI0MSIgdmlld0JveD0iMCAwIDQwLjUgNDEiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIG9wYWNpdHk6IDAuNDM7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQpOwogICAgICB9CiAgICA8L3N0eWxlPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQiIHgxPSIyMC4yNSIgeTE9IjQxIiB4Mj0iMjAuMjUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMTgxODE5Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNDAuNSIgaGVpZ2h0PSI0MSIvPgo8L3N2Zz4K"/> <feComposite result="composite" operator="in" in2="SourceGraphic"/> <feBlend result="blend" mode="overlay" in2="SourceGraphic"/> </filter> <filter id="filter-2" x="378.156" y="815.062" width="23.125" height="23.407" filterUnits="userSpaceOnUse"> <feFlood result="flood" flood-color="#fff"/> <feComposite result="composite" operator="in" in2="SourceGraphic"/> <feBlend result="blend" in2="SourceGraphic"/> </filter> 
     </defs>
     
+    <symbol id="icon-arrow-left" viewBox="0 0 21 13">
+      <title>&#x424;&#x438;&#x433;&#x443;&#x440;&#x430; 1029</title><desc>Created with Avocode.</desc><path id="SvgjsPath1011" d="M237.005 1710.2H223.047L228.326 1705H224.595L217.995 1711.5L224.595 1718H228.326L223.047 1712.8H237.005Z " fill-opacity="1" transform="matrix(1,0,0,1,-217,-1705)"/><path id="SvgjsPath1012" d="M237.005 1710.2H223.047L228.326 1705H224.595L217.995 1711.5L224.595 1718H228.326L223.047 1712.8H237.005Z " fill-opacity="1" transform="matrix(1,0,0,1,-217,-1705)"/>
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 21 13">
+      <title>&#x424;&#x438;&#x433;&#x443;&#x440;&#x430; 1029</title><desc>Created with Avocode.</desc><path id="SvgjsPath1015" d="M941.995 1712.8H955.952L950.673 1718H954.405L961.004 1711.5L954.405 1705H950.673L955.952 1710.2H941.995Z " fill-opacity="1" transform="matrix(1,0,0,1,-941,-1705)"/><path id="SvgjsPath1016" d="M941.995 1712.8H955.952L950.673 1718H954.405L961.004 1711.5L954.405 1705H950.673L955.952 1710.2H941.995Z " fill-opacity="1" transform="matrix(1,0,0,1,-941,-1705)"/>
+    </symbol>
     <symbol id="icon-arrow-dropdown" viewBox="0 0 20 12">
       <title>&#x414;&#x440;&#x43E;&#x43F;&#x434;&#x430;&#x443;&#x43D;</title><desc>Created with Avocode.</desc><path id="SvgjsPath1007" d="M886.001 73.1056L877 82.0009L867.999 73.1056L869.124 71.99369999999999L877 79.77709999999999L884.876 71.99369999999999Z " fill-opacity="1" transform="matrix(1,0,0,1,-867,-71)"/>
     </symbol>
@@ -296,6 +312,46 @@
     </symbol></svg>
     <h1>Gulp SVG Symbols demo page</h1>
     <main>
+      <div class="icon">
+        <p>#icon-arrow-left</p>
+        <div class="icon-wrapper">
+          <svg role="img" class="icon-arrow-left">
+            <use xlink:href="#icon-arrow-left"/>
+          </svg>
+        </div>
+        <div class="icon-dev">
+          <input class="show-code" id="toggle-icon-arrow-left" type="checkbox"/>
+          <div class="icon-action">
+            <button onclick="gulpSvgSymbol.copy(&apos;code-icon-arrow-left&apos;)">Copy</button>
+            <label onclick="gulpSvgSymbol.reflow(&apos;code-icon-arrow-left&apos;)" for="toggle-icon-arrow-left">Show</label>
+          </div>
+<pre>
+<code id="code-icon-arrow-left">&lt;svg role=&quot;img&quot; class=&quot;icon-arrow-left&quot;&gt;
+  &lt;use xlink:href=&quot;#icon-arrow-left&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;</code>
+</pre>
+        </div>
+      </div>
+      <div class="icon">
+        <p>#icon-arrow-right</p>
+        <div class="icon-wrapper">
+          <svg role="img" class="icon-arrow-right">
+            <use xlink:href="#icon-arrow-right"/>
+          </svg>
+        </div>
+        <div class="icon-dev">
+          <input class="show-code" id="toggle-icon-arrow-right" type="checkbox"/>
+          <div class="icon-action">
+            <button onclick="gulpSvgSymbol.copy(&apos;code-icon-arrow-right&apos;)">Copy</button>
+            <label onclick="gulpSvgSymbol.reflow(&apos;code-icon-arrow-right&apos;)" for="toggle-icon-arrow-right">Show</label>
+          </div>
+<pre>
+<code id="code-icon-arrow-right">&lt;svg role=&quot;img&quot; class=&quot;icon-arrow-right&quot;&gt;
+  &lt;use xlink:href=&quot;#icon-arrow-right&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;</code>
+</pre>
+        </div>
+      </div>
       <div class="icon">
         <p>#icon-arrow-dropdown</p>
         <div class="icon-wrapper">

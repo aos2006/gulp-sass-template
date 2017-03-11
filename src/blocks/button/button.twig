@@ -1,3 +1,24 @@
+{% if isLink %}
+    <a href="{{ href }}" class="btn {{ btnClass }}">
+        <span class="btn__txt">
+            {{ btnTxt }}
+        </span>
+        {% if withIcon %}
+            {% include '../icon/icon.twig' with {
+                icon: icon,
+                iconClass: 'btn__icon'
+            } %}
+        {% endif %}
+    </a>
+{% else %}
+
 <button class="btn {{ btnClass }}">
     {{ btnTxt }}
+    {% if withIcon %}
+        {% include '../icon/icon.twig' with {
+        icon: icon,
+        iconClass: 'btn__icon'
+        } %}
+    {% endif %}
 </button>
+{% endif %}

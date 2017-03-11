@@ -1,0 +1,24 @@
+.sidebar
+  @include span(3 last)
+
+
+.sidebar-item
+  background-color: #fff
+  &__header
+    padding: get-rem(16) 18px
+    border-bottom: 1px solid #f8f8f8
+    margin-bottom: get-rem(19)
+  &__title
+    color: #343434
+    font-size: get-rem(20)
+    font-weight: 500
+    text-align: left
+  &__i
+    padding: 0 18px
+    &--category
+      padding-bottom: get-rem(22)
+  &__link
+    display: block
+    margin-bottom: get-rem(15)
+    &:last-child
+      margin-bottom: 0
