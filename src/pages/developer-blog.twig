@@ -1,0 +1,172 @@
+{% set breadcrumbs = [
+{href: '/', txt: 'Главная'},
+{href: 'developer-blog.html', txt: 'Блог'},
+] %}
+
+{% set table = {
+heads: [
+{txt: 'Height'},
+{txt: 'Hash'},
+{txt: 'Type'},
+{txt: 'Age'},
+{txt: 'Difficult'},
+{txt: 'Transactions'},
+{txt: 'Total Out'},
+{txt: 'Block size'},
+{txt: 'TX Size'},
+{txt: ''},
+],
+items: [
+{
+state: 'table__tr--light',
+list: [{txt: '317173', state:'blue'},{txt: 'f29eceb1c18aced7...'},{txt: 'PoS', state: 'red'},{txt: '10 min'},{txt: '6.315659'},{txt: '2'},{txt: '18.368100'},{txt: '411'}, {txt: '2', state: 'red'}, {txt: 'Pow Gen', state: 'black'}]
+
+},
+
+{
+list: [{txt: '317173', state:'blue'},{txt: 'f29eceb1c18aced7...'},{txt: 'PoS', state: 'red'},{txt: '10 min'},{txt: '6.315659'},{txt: '2'},{txt: '18.368100'},{txt: '411'}, {txt: '2', state: 'red'}, {txt: 'Pow Gen', state: 'black'}]
+
+},
+
+]} %}
+
+
+{% set blogList = [
+{title: 'Очередной билд', fromBy: 'admin', date: '24 сентября 2015', href: '#', content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut distinctio eum ex labore laudantium minima nostrum quo sit, soluta.' },
+{title: 'Очередной билд', fromBy: 'admin', date: '24 сентября 2015', href: '#', content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut distinctio eum ex labore laudantium minima nostrum quo sit, soluta.' },
+{title: 'Очередной билд', fromBy: 'admin', date: '24 сентября 2015', href: '#', content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut distinctio eum ex labore laudantium minima nostrum quo sit, soluta.' },
+{title: 'Очередной билд', fromBy: 'admin', date: '24 сентября 2015', href: '#', content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut distinctio eum ex labore laudantium minima nostrum quo sit, soluta.' }
+] %}
+
+{% set accordion = [
+{title: "Most recently mined blocks in the Novacoin block chain", content: 'raz dva tri', defaultState: 'accordion__item--expanded', index: 1},
+] %}
+{% extends '../blocks/layout/layout.twig' %}
+{% block content %}
+    <main class="main main--theme-gray">
+        <div class="main__i">
+            {% embed '../blocks/banner/banner.twig' with {bannerClass: 'banner--type-presentation banner--type-blog'}%}
+                {% block content %}
+                    <div class="banner__info">
+                        <div class="banner__breadcrumbs">
+                            {% include '../blocks/breadcrumbs/breadcrumbs.twig' %}
+                        </div>
+                        <h2 class="banner__title banner__title--large">
+                            Блог разработчика
+                        </h2>
+                    </div>
+                {% endblock %}
+            {% endembed %}
+            <div class="container page__blog">
+                <div class="page__blog-list">
+                    {% include '../blocks/blog-list/blog-list.twig' %}
+                    <div class="page__pagination">
+                        {% include '../blocks/button/button.twig' with {
+                            isLink: true,
+                            btnClass: 'btn--green btn--prev',
+                            btnTxt: 'Предыдущие записи',
+                            withIcon: true,
+                            icon: 'arrow-left'
+                        } %}
+
+                        {% include '../blocks/button/button.twig' with {
+                            isLink: true,
+                            btnClass: 'btn--green btn--next',
+                            btnTxt: 'Следующие записи',
+                            withIcon: true,
+                            icon: 'arrow-right'
+                        } %}
+                    </div>
+                </div>
+                <aside class="sidebar">
+                   <article class="sidebar__item sidebar-item">
+                       <header class="sidebar-item__header">
+                           {% include '../blocks/title/title.twig' with {
+                               h3: true,
+                               titleTxt: 'Рубрики',
+                               titleClass: 'sidebar-item__title'
+                           } %}
+                       </header>
+                       <div class="sidebar-item__links sidebar-item__i sidebar-item__i--category">
+                           <a href="#" class="sidebar-item__link link">Блог разработчика</a>
+                           <a href="#" class="sidebar-item__link link">ВНИМАНИЕ!</a>
+                           <a href="#" class="sidebar-item__link link">Полезная информация</a>
+                       </div>
+                   </article>
+
+                    <article class="sidebar__item sidebar-item sidebar-item--news-letters">
+                        <header class="sidebar-item__header">
+                            {% include '../blocks/title/title.twig' with {
+                            h3: true,
+                            titleTxt: 'Свежие записи',
+                            titleClass: 'sidebar-item__title'
+                            } %}
+                        </header>
+                        <div class="sidebar-item__links sidebar-item__i sidebar-item__i--category">
+                            <div class="sidebar-item__link">
+                                <a href="#" class="link">Очередной ночной билд</a>
+                                <span class="sidebar-item__quantity">(8)</span>
+                                <time class="sidebar-item__date">24 сентября 2015</time>
+                            </div>
+                            <div class="sidebar-item__link">
+                                <a href="#" class="link">Изменение функционала работы с NTP</a>
+                                <span class="sidebar-item__quantity">(8)</span>
+                                <time class="sidebar-item__date">24 сентября 2015</time>
+                            </div>
+                            <div class="sidebar-item__link">
+                                <a href="#" class="link">
+                                    Реализована поддержка протокола NTP в качестве дополнительного источника
+                                </a>
+                                <span class="sidebar-item__quantity">(8)</span>
+                                <time class="sidebar-item__date">24 сентября 2015</time>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="sidebar__item sidebar-item">
+                        <header class="sidebar-item__header">
+                            {% include '../blocks/title/title.twig' with {
+                            h3: true,
+                            titleTxt: 'Свежие комментарии',
+                            titleClass: 'sidebar-item__title'
+                            } %}
+                        </header>
+                        <div class="sidebar-item__links sidebar-item__i sidebar-item__i--category">
+                            <div class="sidebar-item__link">
+                                <a href="#" class="link">Изменение функционала работы с NTP</a>
+                                <span class="sidebar-item__comment">
+                                    Nike Blazer
+                                </span>
+                            </div>
+                            <div class="sidebar-item__link">
+                                <a href="#" class="link">Изменение функционала работы с NTP</a>
+                                <span class="sidebar-item__comment">
+                                    Nike Blazer
+                                </span>
+                            </div>
+                            <div class="sidebar-item__link">
+                                <a href="#" class="link">Изменение функционала работы с NTP</a>
+                                <span class="sidebar-item__comment">
+                                    Nike Blazer
+                                </span>
+                            </div>
+                            <div class="sidebar-item__link">
+                                <a href="#" class="link">Изменение функционала работы с NTP</a>
+                                <span class="sidebar-item__comment">
+                                    Nike Blazer
+                                </span>
+                            </div>
+                            <div class="sidebar-item__link">
+                                <a href="#" class="link">Изменение функционала работы с NTP</a>
+                                <span class="sidebar-item__comment">
+                                    Nike Blazer
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </aside>
+            </div>
+        </div>
+    </main>
+{% endblock %}

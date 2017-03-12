@@ -1,0 +1,26 @@
+{% set breadcrumbs = [
+{href: '/', txt: 'Главная'},
+{href: '#', txt: 'Экспертам'},
+{href: '#', txt: 'Charts'},
+] %}
+
+
+{% extends '../blocks/layout/layout.twig' %}
+{% block content %}
+    <main class="main main--type-blog">
+        <div class="main__i">
+            {% embed '../blocks/banner/banner.twig' with {bannerClass: 'banner--type-presentation banner--type-charts'}%}
+                {% block content %}
+                    <div class="banner__info">
+                        <div class="banner__breadcrumbs">
+                            {% include '../blocks/breadcrumbs/breadcrumbs.twig' %}
+                        </div>
+                        <h2 class="banner__title banner__title--large">
+                            Charts
+                        </h2>
+                    </div>
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </main>
+{% endblock %}

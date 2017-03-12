@@ -2,8 +2,13 @@
   display: table
   width: 100%
   table-layout: fixed
+  &--layout-auto
+    table-layout: auto
   &__tr
     display: table-row
+    .table__td:first-child
+      padding-left: 18px
+      padding-right: 18px
     &--light
       .table__td
         background-color: #edfaed
@@ -15,6 +20,11 @@
         font-weight: 700
         line-height: 18px
         background-color: #b9fab9
+  &__footer
+    border-bottom: none
+    .table__td
+      background-color: #b9fab9
+
   &__td
     display: table-cell
     text-align: center
@@ -25,6 +35,9 @@
     line-height: 18px
     background-color: #fff
     border-bottom: 1px solid #80d381
+    &--footer
+      color: #333
+      font-weight: 700
     &--red
       color: #f20808
     &--blue

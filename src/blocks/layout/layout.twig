@@ -17,19 +17,19 @@
     {% include '../../sprites/svg/svg-symbols.svg' %}
 </div>
 {% set headerDropdown = [
-{txt: 'Explorer', href: '#'},
-{txt: 'Charts', href: '#'},
-{txt: 'P2Pool Stat', href: '#'}
+{txt: 'Explorer', href: 'explorer.html'},
+{txt: 'Charts', href: 'charts.html'},
+{txt: 'P2Pool Stat', href: 'pool-stat.html'}
 ] %}
-{% set items = [{txt: 'Главная',href: '#', defaultState: 'navigation__item--active'},{txt: 'Новичкам',href: '#'},
+{% set items = [{txt: 'Главная',href: '/', defaultState: 'navigation__item--active'},{txt: 'Новичкам',href: 'beginners.html'},
 {txt: 'Экспертам',
 href: '#', withDropdown: true,
 defaultState: 'navigation__item--show-dropdown', list: headerDropdown},
-{txt: 'Блог',href: '#'},{txt: 'Wiki',href: '#'}]
+{txt: 'Блог',href: 'developer-blog.html'},{txt: 'Wiki',href: 'wiki.html'}]
 %}
 
 {% set navigationFooterItems = [
-{txt: 'Новичкам', href: '#'},{txt: 'Экспертам',href: '#'},{txt: 'Блог',href: '#'},{txt: 'Википедия',href: '#'}
+{txt: 'Новичкам', href: 'beginners.html'},{txt: 'Экспертам',href: '#'},{txt: 'Блог',href: 'developer-blog.html'},{txt: 'Википедия',href: 'wiki.html'}
 ] %}
 
 {% set pageFooterNewsList = [

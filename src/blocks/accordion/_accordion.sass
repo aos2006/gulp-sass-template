@@ -3,12 +3,15 @@
     &--expanded
       .accordion__content
         display: block
+      .accordion__icon
+        transform: rotate(180deg)
+        transition: transform .2s linear
 
   &__header
     position: relative
     padding-left: 23px
-    padding-top: get-rem(20)
-    padding-bottom: get-rem(20)
+    padding-top: get-rem(16)
+    padding-bottom: get-rem(16)
     background-color: #fff
     border-bottom: 1px solid #80d381
     cursor: pointer
@@ -40,9 +43,22 @@
     position: absolute
     right: 21px
     top: 50%
-    transform: translateY(-50%)
+    transform: translateY(-50%) rotate(0)
     color: #10b510
+    transition: transform .2s linear
+    will-change: transform
+
   &__table
     background-color: transparent
     padding: 0
+  &__wysiwyg
+    background-color: #fafafa
+
+
+.accordion-list
+  padding-bottom: get-rem(40)
+  &__title
+    padding: get-rem(20) 0
+
+
 

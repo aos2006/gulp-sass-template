@@ -63,97 +63,11 @@
 /******/ 	__webpack_require__.p = "/build/js";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__accordion_accordion__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dropdown_dropdown__ = __webpack_require__(2);
-
-
-
-
-__WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(() => {
-   __WEBPACK_IMPORTED_MODULE_1__accordion_accordion__["a" /* default */].init();
-   __WEBPACK_IMPORTED_MODULE_2__dropdown_dropdown__["a" /* default */].init();
-});
-
-/***/ }),
-/* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-class Accordion {
-
-  handleClick({ toggler, content, root, current }) {
-    return ev => {
-      const isFiltered = Array.from(root.querySelectorAll('.js-accordion-item')).filter(item => item.dataset.eq !== current.dataset.eq);
-      current.classList.toggle('accordion__item--expanded');
-      isFiltered.forEach(item => {
-        item.classList.remove('accordion__item--expanded');
-      });
-    };
-  }
-
-  init() {
-    const accordions = Array.from(document.querySelectorAll('.js-accordion'));
-
-    accordions.forEach(item => {
-      const items = item.querySelectorAll('.js-accordion-item');
-      items.forEach(child => {
-        console.log(child);
-        const toggler = child.querySelector('.js-accordion-header');
-        const content = child.querySelector('.js-accordion-content');
-        toggler.addEventListener('click', this.handleClick({ toggler: toggler, content: content, root: item, current: child }));
-      });
-    });
-  }
-}
-/* unused harmony export Accordion */
-
-
-/* harmony default export */ __webpack_exports__["a"] = new Accordion();
-
-/***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-class Dropdown {
-
-  handleClick(ev) {
-    ev.stopPropagation();
-    const list = ev.currentTarget.querySelector('.js-list');
-    list.classList.toggle('dropdown-list--show');
-  }
-
-  init() {
-    const lists = Array.from(document.querySelectorAll('.js-dropdown'));
-
-    document.addEventListener('click', ev => {
-
-      lists.forEach(item => {
-        item.querySelector('.js-list').classList.remove('dropdown-list--show');
-      });
-    });
-
-    lists.forEach(item => {
-      item.addEventListener('click', this.handleClick);
-    });
-  }
-}
-
-/* harmony default export */ __webpack_exports__["a"] = new Dropdown();
-
-/***/ }),
-/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10380,12 +10294,142 @@ return jQuery;
 
 
 /***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__accordion_accordion__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dropdown_dropdown__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_tabs__ = __webpack_require__(4);
+
+
+
+
+
+__WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(() => {
+   __WEBPACK_IMPORTED_MODULE_1__accordion_accordion__["a" /* default */].init();
+   __WEBPACK_IMPORTED_MODULE_2__dropdown_dropdown__["a" /* default */].init();
+   __WEBPACK_IMPORTED_MODULE_3__tabs_tabs__["a" /* default */].init();
+});
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+class Accordion {
+
+  handleClick({ toggler, content, root, current }) {
+    return ev => {
+      const isFiltered = Array.from(root.querySelectorAll('.js-accordion-item')).filter(item => item.dataset.eq !== current.dataset.eq);
+      current.classList.toggle('accordion__item--expanded');
+      isFiltered.forEach(item => {
+        item.classList.remove('accordion__item--expanded');
+      });
+    };
+  }
+
+  init() {
+    const accordions = Array.from(document.querySelectorAll('.js-accordion'));
+
+    accordions.forEach(item => {
+      const items = item.querySelectorAll('.js-accordion-item');
+      items.forEach(child => {
+        console.log(child);
+        const toggler = child.querySelector('.js-accordion-header');
+        const content = child.querySelector('.js-accordion-content');
+        toggler.addEventListener('click', this.handleClick({ toggler: toggler, content: content, root: item, current: child }));
+      });
+    });
+  }
+}
+/* unused harmony export Accordion */
+
+
+/* harmony default export */ __webpack_exports__["a"] = new Accordion();
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+class Dropdown {
+
+  handleClick(ev) {
+    ev.stopPropagation();
+    if (ev.target.href === '#' || ev.target.href === '') ev.preventDefault();
+    const list = ev.currentTarget.querySelector('.js-list');
+    list.classList.toggle('dropdown-list--show');
+  }
+
+  init() {
+    const lists = Array.from(document.querySelectorAll('.js-dropdown'));
+
+    document.addEventListener('click', ev => {
+
+      lists.forEach(item => {
+        item.querySelector('.js-list').classList.remove('dropdown-list--show');
+      });
+    });
+
+    lists.forEach(item => {
+      item.addEventListener('click', this.handleClick);
+    });
+  }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = new Dropdown();
+
+/***/ }),
 /* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+
+
+class Tabs {
+  handleClick(root) {
+
+    return ev => {
+      ev.preventDefault();
+      const currentLink = ev.currentTarget;
+      const currentTab = ev.currentTarget.dataset.href;
+      const filteredTabs = Array.from(root.querySelectorAll('.tabs__content')).filter(item => item.id !== currentTab);
+      Array.from(root.querySelectorAll('.tabs__link')).forEach(item => item.classList.remove('tabs__link--active'));
+      currentLink.classList.add('tabs__link--active');
+      root.querySelector(`#${currentTab}`).classList.add('tabs__content--active');
+      filteredTabs.forEach(item => item.classList.remove('tabs__content--active'));
+    };
+  }
+
+  init() {
+    const tabsList = Array.from(document.querySelectorAll('.js-tabs'));
+
+    tabsList.forEach(item => {
+      const togglers = Array.from(item.querySelectorAll('.js-tabs-toggler'));
+      const root = item;
+
+      togglers.forEach(item => {
+        item.addEventListener('click', this.handleClick(root));
+      });
+    });
+  }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = new Tabs();
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(0);
+module.exports = __webpack_require__(1);
 
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.js.map?ba5b4f4b48b50c7a1de4
+//# sourceMappingURL=main.js.map?b58c893ac224c0d10802

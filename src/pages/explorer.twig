@@ -1,7 +1,7 @@
 {% set breadcrumbs = [
-{href: '#', txt: 'Главная'},
+{href: '/', txt: 'Главная'},
 {href: '#', txt: 'Экспертам'},
-{href: '#', txt: 'Explorer'}
+{href: 'explorer.html', txt: 'Explorer'}
 ] %}
 
 {% set table = {
@@ -31,12 +31,40 @@ list: [{txt: '317173', state:'blue'},{txt: 'f29eceb1c18aced7...'},{txt: 'PoS', s
 
 ]} %}
 
+
+{% set table2 = {
+heads: [
+{txt: 'Hash'},
+{txt: 'Age'},
+{txt: 'Total Out'},
+{txt: 'Difficult'},
+{txt: 'TX Size'},
+{txt: ''},
+{txt: ''},
+],
+items: [
+{
+state: 'table__tr--light',
+list: [
+{txt: '317173', state:'blue'},
+{txt: 'f29eceb1c18aced7...'},
+{txt: 'PoS', state: 'red'},
+{txt: '10 min'},
+{txt: '6.315659'},
+{txt: '2'},
+{txt: '411'},
+
+]}
+
+]} %}
+
+
 {% set accordion = [
 {title: "Most recently mined blocks in the Novacoin block chain", content: 'raz dva tri', defaultState: 'accordion__item--expanded', index: 1},
 ] %}
 {% extends '../blocks/layout/layout.twig' %}
 {% block content %}
-    <main class="main">
+    <main class="main main--theme-gray">
         <div class="main__i">
             {% embed '../blocks/banner/banner.twig' with {bannerClass: 'banner--type-presentation banner--type-explorer'}%}
                 {% block content %}
@@ -84,7 +112,7 @@ list: [{txt: '317173', state:'blue'},{txt: 'f29eceb1c18aced7...'},{txt: 'PoS', s
                  {% endembed %}
              </div>
 
-            <div class="page__table container">
+            <div class="page__table container page__table--type-sidebar">
                 {% embed '../blocks/accordion/accordion.twig' %}
                     {% block content %}
                         {% for item in accordion %}
@@ -98,9 +126,9 @@ list: [{txt: '317173', state:'blue'},{txt: 'f29eceb1c18aced7...'},{txt: 'PoS', s
                                         } %}
                                     </i>
                                 </header>
-                                <div class="accordion__table js-accordion-content accordion__content">
+                                <div class="accordion__table js-accordion-content accordion__content container">
                                     {% include '../blocks/table/table.twig' with {
-                                    table: table
+                                        table: table2
                                     }%}
                                     <div class="page__btn">
                                         {% include '../blocks/button/button.twig' with {
@@ -113,6 +141,22 @@ list: [{txt: '317173', state:'blue'},{txt: 'f29eceb1c18aced7...'},{txt: 'PoS', s
                         {% endfor %}
                     {% endblock %}
                 {% endembed %}
+                <aside class="sidebar">
+                    <article class="sidebar__item sidebar-item">
+                        <header class="sidebar-item__header sidebar-item__header--theme-green">
+                            {% include '../blocks/title/title.twig' with {
+                            h3: true,
+                            titleTxt: 'Other useful links',
+                            titleClass: 'sidebar-item__title'
+                            } %}
+                        </header>
+                        <div class="sidebar-item__links sidebar-item__i sidebar-item__i--category">
+                            <a href="#" class="sidebar-item__link link link--size-xs">Novaco.in API methods (new link)</a>
+                            <a href="#" class="sidebar-item__link link link--size-xs">Novaco.in API methods (new link)</a>
+                            <a href="#" class="sidebar-item__link link link--size-xs">Novaco.in API methods (new link)</a>
+                        </div>
+                    </article>
+                </aside>
             </div>
 
         </div>

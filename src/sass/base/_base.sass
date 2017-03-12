@@ -20,8 +20,11 @@ body
 	@include container(1024px)
 html
 	font-size: 10px
+body
+	min-width: 1024px
+
 .main
-	&--type-blog
+	&--theme-gray
 		background-color: #f0f2f1
 
 .page
@@ -39,6 +42,12 @@ html
 		margin-top: get-rem(20)
 	&__table
 		margin-bottom: get-rem(40)
+		&:last-of-type
+			margin-bottom: 0
+			padding-bottom: get-rem(40)
+		&--type-sidebar
+			.accordion
+				@include span(9)
 	&__blog-list
 		@include span(9)
 	&__blog
@@ -48,3 +57,22 @@ html
 		align-items: center
 		justify-content: space-between
 		margin-top: get-rem(40)
+
+
+
+.wysiwyg
+	p,ul
+		font-size: get-rem(14)
+		font-weight: 400
+		color: #535353
+		line-height: 18px
+	b
+		font-weight: 700
+	h3
+		margin: get-rem(15) 0
+	ul
+		list-style: square
+		padding-left: 18px
+
+
+

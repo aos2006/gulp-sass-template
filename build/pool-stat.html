@@ -140,7 +140,7 @@
 </ul>
                     </li>                <li class="navigation__item  ">            <a href="developer-blog.html" class="navigation__link">Блог</a>                    </li>                <li class="navigation__item  ">            <a href="wiki.html" class="navigation__link">Wiki</a>                    </li>            </ul></nav><!-- end navigation -->        </div>    </div></header><!-- end page-header -->        <main class="main main--theme-gray">
         <div class="main__i">
-            <section class="banner banner--type-presentation banner--type-explorer">
+            <section class="banner banner--type-presentation banner--type-pool-stats">
     <div class="banner__i container">
                             <div class="banner__info">
                         <div class="banner__breadcrumbs">
@@ -157,210 +157,439 @@
     </ul>
                         </div>
                         <h2 class="banner__title banner__title--large">
-                            Eplorer
+                            P2Pool Stat
                         </h2>
-                    </div>
-                    <div class="banner__search">
-                        <div class="search">
-    <div class="search__i">
-        <div class="search__input-container">
-            <div class="search__icon">
-                <i class="icon">
-    <svg class="icon icon-search ">
-        <use xlink:href="#icon-search" />
-    </svg>
-</i>
-            </div>
-            <input type="text" placeholder="Hash (not less than 12 first chars) or numbers" class="input input--white search__input" value="">
-        </div>
-        <p class="search__descr">
-            You may enter a height of block, block hash, address or transaction hash not less than 12 first characters
-        </p>
-        
-<button class="btn btn--green">
-    Search
-    </button>
-    </div>
-</div>
                     </div>
                     </div>
 </section>
-             <div class="page__table container">
-                 <ul class="accordion  js-accordion">
-                                                      <li class="accordion__item accordion__item--expanded js-accordion-item" data-eq="1">
-                             <header class="accordion__header js-accordion-header">
-                                 <h3 class="accordion__title">Most recently mined blocks in the Novacoin block chain</h3>
-                                 <i class="accordion__icon">
-                                     <i class="icon">
-    <svg class="icon icon-arrow-dropdown arrow-accordion-down">
-        <use xlink:href="#icon-arrow-dropdown" />
-    </svg>
-</i>
-                                 </i>
-                             </header>
-                             <div class="accordion__table js-accordion-content accordion__content">
-                                 <div class="table ">
+            <div class="container pool-stats">
+                <p class="pool-stats__description">
+                    Novacoin <a href="#" class="link">P2Pool</a> is a decentralized mining pool that works by creating a peer-to-peer network of miner nodes.
+                    Get <a href="#" class="link">sources</a> or <a href="#" class="link">binaries.</a>
+                </p>
+                <div class="graphic pool-stats__graphic">
+
+                </div>
+                <a href="#" class="link pool-stats__link">How to P2Pool on Wiki</a>
+               <div id="tabs" class="tabs js-tabs">
+    <ul class="tabs__header">
+        <li class="tabs__toggler">
+            <a data-href="tab-1" title="" class="tabs__link tabs__link--active js-tabs-toggler">Users & Payouts</a>
+        </li>
+        <li class="tabs__toggler">
+            <a data-href="tab-2" title="" class="tabs__link js-tabs-toggler">Last blocks</a>
+        </li>
+        <li class="tabs__toggler">
+            <a data-href="tab-3" title="" class="tabs__link js-tabs-toggler">Test nodes & users</a></li>
+        <li class="tabs__toggler">
+            <a data-href="tab-4" title="" class="tabs__link js-tabs-toggler">Peers & versions</a></li>
+    </ul>
+    <div id="tabs_container">
+                               <div id="tab-1" class="tabs__content tabs__content--active">
+                           <h3 class="title tabs__title title--aligment-left">
+    Users pool rate percent and payouts if a block were found now
+</h3>
+                           <div class="table table--layout-auto">
     <div class="table__tr table__tr--type-head">
-                    <div class="table__td">Height</div>
-                    <div class="table__td">Hash</div>
-                    <div class="table__td">Type</div>
-                    <div class="table__td">Age</div>
-                    <div class="table__td">Difficult</div>
-                    <div class="table__td">Transactions</div>
-                    <div class="table__td">Total Out</div>
-                    <div class="table__td">Block size</div>
-                    <div class="table__td">TX Size</div>
-                    <div class="table__td"></div>
+                    <div class="table__td">#</div>
+                    <div class="table__td">user (payout address)</div>
+                    <div class="table__td">hash rate</div>
+                    <div class="table__td">payouts, NVC</div>
             </div>
             <div class="table__tr table__tr--light">
-                            <div class="table__td table__td--blue">
-                    317173
-                </div>
-                            <div class="table__td table__td--">
-                    f29eceb1c18aced7...
-                </div>
-                            <div class="table__td table__td--red">
-                    PoS
-                </div>
-                            <div class="table__td table__td--">
-                    10 min
-                </div>
-                            <div class="table__td table__td--">
-                    6.315659
-                </div>
-                            <div class="table__td table__td--">
-                    2
-                </div>
-                            <div class="table__td table__td--">
-                    18.368100
-                </div>
-                            <div class="table__td table__td--">
-                    411
-                </div>
-                            <div class="table__td table__td--red">
-                    2
+                            <div class="table__td table__td--black">
+                    1
                 </div>
                             <div class="table__td table__td--black">
-                    Pow Gen
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
                 </div>
                     </div>
             <div class="table__tr ">
-                            <div class="table__td table__td--blue">
-                    317173
-                </div>
-                            <div class="table__td table__td--">
-                    f29eceb1c18aced7...
-                </div>
-                            <div class="table__td table__td--red">
-                    PoS
-                </div>
-                            <div class="table__td table__td--">
-                    10 min
-                </div>
-                            <div class="table__td table__td--">
-                    6.315659
-                </div>
-                            <div class="table__td table__td--">
-                    2
-                </div>
-                            <div class="table__td table__td--">
-                    18.368100
-                </div>
-                            <div class="table__td table__td--">
-                    411
-                </div>
-                            <div class="table__td table__td--red">
-                    2
+                            <div class="table__td table__td--black">
+                    1
                 </div>
                             <div class="table__td table__td--black">
-                    Pow Gen
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
                 </div>
                     </div>
-        </div>
-                                 <div class="page__btn">
-                                     
-<button class="btn btn--green">
-    More blocks
-    </button>
-                                 </div>
-                             </div>
-                         </li>
-                                     </ul>
-             </div>
-
-            <div class="page__table container page__table--type-sidebar">
-                <ul class="accordion  js-accordion">
-                                                        <li class="accordion__item accordion__item--expanded js-accordion-item" data-eq="1">
-                                <header class="accordion__header js-accordion-header">
-                                    <h3 class="accordion__title">Most recently mined blocks in the Novacoin block chain</h3>
-                                    <i class="accordion__icon">
-                                        <i class="icon">
-    <svg class="icon icon-arrow-dropdown arrow-accordion-down">
-        <use xlink:href="#icon-arrow-dropdown" />
-    </svg>
-</i>
-                                    </i>
-                                </header>
-                                <div class="accordion__table js-accordion-content accordion__content container">
-                                    <div class="table ">
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+                <div class="table__tr table__footer">
+                            <div class="table__td ">
+                    
+                </div>
+                            <div class="table__td ">
+                    
+                </div>
+                            <div class="table__td table__td--footer">
+                    Total
+                </div>
+                            <div class="table__td table__td--footer">
+                    6.45235
+                </div>
+                    </div>
+    </div>
+                       </div>
+                       <div id="tab-2" class="tabs__content">
+                           <h3 class="title tabs__title title--aligment-left">
+    Tab 2
+</h3>
+                           <div class="table table--layout-auto">
     <div class="table__tr table__tr--type-head">
-                    <div class="table__td">Hash</div>
-                    <div class="table__td">Age</div>
-                    <div class="table__td">Total Out</div>
-                    <div class="table__td">Difficult</div>
-                    <div class="table__td">TX Size</div>
-                    <div class="table__td"></div>
-                    <div class="table__td"></div>
+                    <div class="table__td">#</div>
+                    <div class="table__td">user (payout address)</div>
+                    <div class="table__td">hash rate</div>
+                    <div class="table__td">payouts, NVC</div>
             </div>
             <div class="table__tr table__tr--light">
-                            <div class="table__td table__td--blue">
-                    317173
+                            <div class="table__td table__td--black">
+                    1
                 </div>
-                            <div class="table__td table__td--">
-                    f29eceb1c18aced7...
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
                 </div>
-                            <div class="table__td table__td--red">
-                    PoS
+                            <div class="table__td table__td--black">
+                    52.382%
                 </div>
-                            <div class="table__td table__td--">
-                    10 min
+                            <div class="table__td table__td--black">
+                    3.594508
                 </div>
-                            <div class="table__td table__td--">
-                    6.315659
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
                 </div>
-                            <div class="table__td table__td--">
-                    2
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
                 </div>
-                            <div class="table__td table__td--">
-                    411
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
                 </div>
                     </div>
         </div>
-                                    <div class="page__btn">
-                                        
-<button class="btn btn--green">
-    More blocks
-    </button>
-                                    </div>
-                                </div>
-                            </li>
-                                            </ul>
-                <aside class="sidebar">
-                    <article class="sidebar__item sidebar-item">
-                        <header class="sidebar-item__header sidebar-item__header--theme-green">
-                            <h3 class="title sidebar-item__title">
-    Other useful links
+                       </div>
+                       <div id="tab-3" class="tabs__content">
+                           <h3 class="title tabs__title title--aligment-left">
+    Tab3
 </h3>
-                        </header>
-                        <div class="sidebar-item__links sidebar-item__i sidebar-item__i--category">
-                            <a href="#" class="sidebar-item__link link link--size-xs">Novaco.in API methods (new link)</a>
-                            <a href="#" class="sidebar-item__link link link--size-xs">Novaco.in API methods (new link)</a>
-                            <a href="#" class="sidebar-item__link link link--size-xs">Novaco.in API methods (new link)</a>
-                        </div>
-                    </article>
-                </aside>
+                           <div class="table table--layout-auto">
+    <div class="table__tr table__tr--type-head">
+                    <div class="table__td">#</div>
+                    <div class="table__td">user (payout address)</div>
+                    <div class="table__td">hash rate</div>
+                    <div class="table__td">payouts, NVC</div>
             </div>
-
+            <div class="table__tr table__tr--light">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+        </div>
+                       </div>
+                       <div id="tab-4" class="tabs__content">
+                           <h3 class="title tabs__title title--aligment-left">
+    Tab4
+</h3>
+                           <div class="table table--layout-auto">
+    <div class="table__tr table__tr--type-head">
+                    <div class="table__td">#</div>
+                    <div class="table__td">user (payout address)</div>
+                    <div class="table__td">hash rate</div>
+                    <div class="table__td">payouts, NVC</div>
+            </div>
+            <div class="table__tr table__tr--light">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+            <div class="table__tr ">
+                            <div class="table__td table__td--black">
+                    1
+                </div>
+                            <div class="table__td table__td--black">
+                    4Mv1JNNXBu5AQ8QypvG3mGYZLA94KMPzC4
+                </div>
+                            <div class="table__td table__td--black">
+                    52.382%
+                </div>
+                            <div class="table__td table__td--black">
+                    3.594508
+                </div>
+                    </div>
+        </div>
+                       </div>
+                        </div>
+</div>
+            </div>
         </div>
     </main>
     <!-- start page-footer --><footer class="page-footer">    <div class="page-footer__i container">        <section class="page-footer__item">            <a href="/" class="logo logo--type-footer page-footer__logo">

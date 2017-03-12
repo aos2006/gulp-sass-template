@@ -1,4 +1,4 @@
-<div class="table">
+<div class="table {{ tableClass }}">
     <div class="table__tr table__tr--type-head">
         {% for item in table.heads %}
             <div class="table__td">{{ item.txt }}</div>
@@ -13,4 +13,13 @@
             {% endfor %}
         </div>
     {% endfor %}
+    {% if withFooter %}
+        <div class="table__tr table__footer">
+            {% for item in table.footer %}
+                <div class="table__td {{ item.class }}">
+                    {{ item.txt }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
 </div>

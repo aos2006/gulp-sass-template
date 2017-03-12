@@ -1,0 +1,30 @@
+<div id="tabs" class="tabs js-tabs">
+    <ul class="tabs__header">
+        <li class="tabs__toggler">
+            <a data-href="tab-1" title="" class="tabs__link tabs__link--active js-tabs-toggler">Users & Payouts</a>
+        </li>
+        <li class="tabs__toggler">
+            <a data-href="tab-2" title="" class="tabs__link js-tabs-toggler">Last blocks</a>
+        </li>
+        <li class="tabs__toggler">
+            <a data-href="tab-3" title="" class="tabs__link js-tabs-toggler">Test nodes & users</a></li>
+        <li class="tabs__toggler">
+            <a data-href="tab-4" title="" class="tabs__link js-tabs-toggler">Peers & versions</a></li>
+    </ul>
+    <div id="tabs_container">
+        {% block content %}
+        <div id="tab-1" class="tab__content">
+            aleshk1
+        </div>
+        <div id="tab-2" class="tabs__content">
+            aleshka2
+        </div>
+        <div id="tab-3" class="tabs__content">
+            aleshka3
+        </div>
+        <div id="tab-4" class="tabs__content">
+            aleshka3
+        </div>
+        {% endblock %}
+    </div>
+</div>

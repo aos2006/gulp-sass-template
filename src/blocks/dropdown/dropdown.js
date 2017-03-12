@@ -2,6 +2,7 @@ class Dropdown {
 
   handleClick(ev) {
       ev.stopPropagation();
+      if (ev.target.href === '#' || ev.target.href === '') ev.preventDefault();
       const list = ev.currentTarget.querySelector('.js-list');
       list.classList.toggle('dropdown-list--show');
   };
