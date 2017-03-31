@@ -1,1 +1,45 @@
-<!-- start page-footer -->{% set newsClass = pageFooterNewsClass %}{% set newsList = pageFooterNewsList %}{% set socialList = pageFooterSocialList %}{% set items = navigationFooterItems %}{% set navigationClass = 'navigation--type-vertical navigation--type-footer' %}<footer class="page-footer">    <div class="page-footer__i container">        <section class="page-footer__item">            {% include '../logo/logo.twig' with {                logoClass: 'logo--type-footer page-footer__logo'            } %}            <p class="page-footer__copyright">                © 2017 Novacoin.ru<br>                Все права защищены.<br>                Копирование<br>                материалов запрещено<br>            </p>        </section>        <section class="page-footer__item">            <h3 class="page-footer__title">Ссылки</h3>            {% include '../navigation/navigation.twig' %}        </section>        <section class="page-footer__item">            <h3 class="page-footer__title">Публикации в блоге</h3>            {% embed '../news-list/news-list.twig'  with {'newsClass': 'news-list--type-footer'} %}               {% block content %}                   {% for item in newsList %}                       <li class="news-list__item">                           <time class="news-list__date">{{ item.date }}</time>                           <div class="news-list__i">                               <a href="{{ item.href }}" class="news-list__link">{{ item.txt }}</a>                           </div>                       </li>                    {% endfor %}                {% endblock %}            {% endembed %}        </section>        <section class="page-footer__item">            <h3 class="page-footer__title">Мы в соцсетях</h3>            {% include '../social-list/social-list.twig' %}        </section>    </div></footer><!-- end page-footer -->
+<!-- start page-footer -->
+{% set newsClass = pageFooterNewsClass %}
+{% set newsList = pageFooterNewsList %}
+{% set socialList = pageFooterSocialList %}
+{% set items = navigationFooterItems %}
+{% set navigationClass = 'navigation--type-vertical navigation--type-footer' %}
+<footer class="page-footer">
+    <div class="page-footer__i container">
+        <section class="page-footer__item">
+            {% include '../logo/logo.twig' with {
+                logoClass: 'logo--type-footer page-footer__logo'
+            } %}
+            <p class="page-footer__copyright">
+                © 2017 Novacoin.ru<br>
+                Все права защищены.<br>
+                Копирование<br>
+                материалов запрещено<br>
+            </p>
+        </section>
+        <section class="page-footer__item">
+            <h3 class="page-footer__title">Ссылки</h3>
+            {% include '../navigation/navigation.twig' %}
+        </section>
+        <section class="page-footer__item">
+            <h3 class="page-footer__title">Публикации в блоге</h3>
+            {% embed '../news-list/news-list.twig'  with {'newsClass': 'news-list--type-footer'} %}
+               {% block content %}
+                   {% for item in newsList %}
+                       <li class="news-list__item">
+                           <time class="news-list__date">{{ item.date }}</time>
+                           <div class="news-list__i">
+                               <a href="{{ item.href }}" class="news-list__link">{{ item.txt }}</a>
+                           </div>
+                       </li>
+                    {% endfor %}
+                {% endblock %}
+            {% endembed %}
+        </section>
+        <section class="page-footer__item">
+            <h3 class="page-footer__title">Мы в соцсетях</h3>
+            {% include '../social-list/social-list.twig' %}
+        </section>
+    </div>
+</footer>
+<!-- end page-footer -->
